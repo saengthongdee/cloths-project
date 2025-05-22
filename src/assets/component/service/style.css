@@ -1,0 +1,49 @@
+aside {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 2rem;
+
+  .text {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+
+    h1 {
+      font-size: 30px;
+      color: #333;
+      
+    }
+    p {
+      max-width: 500px;
+      font-size: 18.5px;
+      color: #565656;
+    }
+  }
+  .image-swiper {
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    
+
+    .slide-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+     
+      
+    }
+  }
+}
