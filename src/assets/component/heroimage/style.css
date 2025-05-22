@@ -1,0 +1,96 @@
+main {
+  width: 100%;
+  height: 100vh;
+
+  padding-top: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+  .text {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    background: linear-gradient(to right,rgb(51, 51, 65),rgba(13,13,43));
+
+    .box-text {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      flex-direction: column;
+      gap: 2rem;
+      max-width: 500px;
+
+      h1 {
+        font-size: 60px;
+      }
+      p {
+        font-size: 20.5px;
+        color: #c2c2c2;
+      }
+      .btn {
+        padding: 1.2rem 2.5rem;
+        text-transform: uppercase;
+        font-size: 19.5px;
+        border-radius: 5px;
+        cursor: pointer;
+
+        background: linear-gradient(270deg, #724d2f, #c88a58, #392b20);
+        background-size: 600% 600%;
+
+        animation: gradientMove 6s ease infinite;
+      }
+    }
+  }
+  .box-image {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: #fff;
+      }
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.1);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+    }
+    .slide-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
