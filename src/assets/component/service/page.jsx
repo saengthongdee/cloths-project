@@ -1,12 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./style.css";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// ✅ เพิ่มตรงนี้
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import { EffectCoverflow } from "swiper/modules";
-import "swiper/css/effect-coverflow";
+gsap.registerPlugin(ScrollTrigger);
 
 function Service() {
   const service_data = [
@@ -80,13 +77,6 @@ function Service() {
     return () => tl.kill();
   }, [index]);
 
-  // 🌀 Sync Swiper กับ index
-  useEffect(() => {
-    if (swiperRef.current) {
-      swiperRef.current.slideToLoop(index); // ใช้กับ loop
-    }
-  }, [index]);
-
   return (
     <div>
       <aside>
@@ -96,30 +86,12 @@ function Service() {
         </div>
 
         <div className="image-swiper">
-          <Swiper
-            modules={[EffectCoverflow]}
-            effect="coverflow"
-            grabCursor={true}
-            centeredSlides={true}
-            loop={true}
-            slidesPerView={1}
-            spaceBetween={30}
-            onSlideChange={(swiper) => setIndex(swiper.realIndex)}
-            onSwiper={(swiper) => (swiperRef.current = swiper)}
-            coverflowEffect={{
-              rotate: 0,
-              stretch: 0,
-              depth: 150,
-              modifier: 1.5,
-              slideShadows: false,
+          <div
+            style={{
+              backgroundImage: `url(${service_data[index].image})`,
             }}
-          >
-            {service_data.map((item, i) => (
-              <SwiperSlide key={i}>
-                <img src={item.image} alt={item.text} className="slide-image" />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+            className="slide-image"
+          ></div>
         </div>
       </aside>
     </div>
