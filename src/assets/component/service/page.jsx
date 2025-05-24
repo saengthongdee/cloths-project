@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./style.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Marquee from "react-fast-marquee";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -93,7 +94,13 @@ function Service() {
             className="slide-image"
           ></div>
         </div>
+         <Marquee className="slide-text" speed={50} gradient={false}>
+        From everyday wear to special occasions — Get custom-tailored clothing
+        with attention to detail, perfect fit, and your choice of fabric | Free
+        design consultation | Crafted with care, made for you
+      </Marquee>
       </aside>
+      
     </div>
   );
 }

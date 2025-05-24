@@ -4,3 +4,13 @@
   box-sizing: border-box;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+:root {
+  --b1 : rgb(51, 51, 65);
+  --b2 : rgba(13,13,43);
+  --bl3 : #333;
+  --wh : #fff;
+  --br2 : #92633d;
+  --br1 : #c88a58;
+  --sm : #F5F5F5;
+}
