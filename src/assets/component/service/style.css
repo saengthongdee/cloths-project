@@ -65,12 +65,50 @@ aside {
       box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
       transition: all 0.5s ease-in-out;
       border-right: 5px solid #545454;
-
     }
     .slide-image:hover {
       transform: rotateY(0deg) scale(1.05);
       box-shadow: rgba(0, 0, 0, 0.6) 0px 30px 25px -20px;
       border: none;
+    }
+  }
+}
+@media (max-width: 480px) {
+  aside {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    .text {
+      width: 80%;
+      text-align: center;
+      gap: 1rem;
+
+      h1 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+    .slide-text {
+      font-size: 15px;
+    }
+    .image-swiper {
+      width: 100%;
+      display: flex;
+      position: relative;
+      overflow: visible;
+
+      .slide-image {
+        width: 70%;
+        height: 250px;
+        transform: rotateY(-5deg);
+        position: absolute;
+        top: -2rem;
+        left: 2.5rem;
+      }
     }
   }
 }
