@@ -20,6 +20,12 @@ aside {
     position: absolute;
     bottom: 0;
   }
+  h1 {
+    position: absolute;
+    top: 3rem;
+    font-size: 25px;
+    color: var(--bl3);
+  }
 
   .text {
     width: 50%;
@@ -30,7 +36,7 @@ aside {
     flex-direction: column;
     gap: 2rem;
 
-    h1 {
+    h2 {
       font-size: 30px;
       color: #333;
     }
@@ -108,6 +114,45 @@ aside {
         position: absolute;
         top: -2rem;
         left: 2.5rem;
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  aside {
+    .slide-text {
+      padding: rem;
+      color: #4f4f4f;
+      font-size: 25px;
+      position: absolute;
+      bottom: 0;
+    }
+    h1 {
+      font-size: 50px;
+      position: absolute;
+      top: 4rem;
+      color: #4a4a4a;
+    }
+    .text {
+      width: 60%;
+
+      h2 {
+        font-size: 40px;
+      }
+      p {
+        text-align: center;
+        font-size: 25px;
+      }
+    }
+    .image-swiper {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+
+      .slide-image {
+        width: 80%;
+        height: 500px;
+        font-size: 50px;
       }
     }
   }

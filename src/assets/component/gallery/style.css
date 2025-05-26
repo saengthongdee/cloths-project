@@ -1,0 +1,111 @@
+.gallery {
+  width: 100%;
+  min-height: 120vh;
+  padding: 2rem 5rem;
+  background-color: var(--sm);
+
+  h1 {
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    color: var(--br2);
+    border-bottom: 3px solid var(--b1);
+  }
+
+  .box-gallery {
+    width: 100%;
+    min-height: 120vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+
+    .gallery-image {
+      color: #fff;
+      text-align: center;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border-radius: 10px;
+      border: 2px solid #fff;
+      box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
+        rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+        rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      transition: all 0.5s ease-in-out;
+      transition-delay: 100ms;
+    }
+    .gallery-image:hover {
+      transform: scale(1.05);
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px, rgba(0, 0, 0, 0.2) 0px 4px 2px,
+        rgba(0, 0, 0, 0.2) 0px 8px 4px, rgba(0, 0, 0, 0.2) 0px 16px 8px,
+        rgba(0, 0, 0, 0.2) 0px 32px 16px;
+    }
+    .gallery-image:nth-child(1) {
+      grid-column: 1 /3;
+      grid-row: 1/3;
+    }
+    .gallery-image:nth-child(7) {
+      grid-column: 2 /3;
+      grid-row: 3/5;
+    }
+    .gallery-image:nth-child(8) {
+      grid-column: 3 /4;
+      grid-row: 3/5;
+    }
+    .gallery-image:nth-child(9) {
+      grid-column: 4 /5;
+      grid-row: 3/5;
+    }
+  }
+}
+.scale-up {
+  opacity: 0;
+  transform: scale(0.9);
+
+  &.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    overflow: hidden;
+    padding: 0.5rem;
+
+    h1 {
+      font-size: 20px;
+    }
+
+    .box-gallery {
+      display: grid;
+      min-height: auto;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: none;
+      gap: 1rem;
+      padding: 1rem;
+
+      .gallery-image {
+        height: 200px;
+        border-radius: 5px;
+        grid-column: auto !important;
+        grid-row: auto !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .gallery {
+    min-height: 100vh;
+    padding: 0rem;
+    h1 {
+      font-size: 40px;
+    }
+    .box-gallery {
+      padding-bottom: 0;
+      min-height: 80vh;
+    }
+  }
+}

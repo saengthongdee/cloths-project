@@ -6,13 +6,61 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding-left: 5rem;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: fixed;
-  z-index: 999;
+  z-index: 998;
+
+  .icon {
+    display: none;
+  }
 
   .logo {
     font-size: 25px;
     color: #c88a58;
+  }
+
+  .menu-mobile {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    top: 2.60rem;
+    z-index: 999;
+    /* padding: 1rem; */
+    display: none;
+    right: 0rem;
+    background-color: #ffffff;
+
+    ul {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+
+      li {
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        /* border-bottom: 2px solid rgb(151, 151, 151); */
+
+        a{
+          width: 100%;
+        }
+
+        a:hover{
+          color: #92633d;
+        }
+        .visit {
+          background:none;
+          color: #333;
+          padding: 0;
+        }
+      }
+    }
   }
 
   ul {
@@ -24,20 +72,69 @@ nav {
       color: #424242;
       text-decoration: none;
       font-size: 15.5px;
-      transition: .25s ease-in-out;
+      transition: 0.25s ease-in-out;
     }
-    li a:hover{
-        color:#92633d;
+    li a:hover {
+      color: #92633d;
     }
     .visit {
-      padding: 2rem;
+      padding: 1.75rem;
       background-color: #92633d;
       color: #fff;
       text-transform: uppercase;
       font-weight: 600;
     }
-    .visit:hover{
-        color: #c3c3c3;
+    .visit:hover {
+      color: #c3c3c3;
+    }
+  }
+}
+@media (max-width: 480px) {
+  nav {
+    padding: 0;
+    height: 5vh;
+    padding: .5rem;
+
+    .icon {
+      display: block;
+      font-size: 30px;
+      
+    }
+
+    ul {
+      display: none;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  nav {
+    padding: 0;
+    height: 8vh;
+    padding: 1rem;
+
+    .logo{
+      font-size: 50px;
+    }
+  .menu-mobile{
+    top: 5.6rem;
+
+    ul li {
+      padding: 2rem;
+
+      a{
+        font-size: 25px;
+      }
+    }
+  }
+
+    .icon {
+      display: block;
+      font-size: 50px;
+      
+    }
+
+    ul {
+      display: none;
     }
   }
 }

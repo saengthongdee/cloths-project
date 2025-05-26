@@ -81,8 +81,9 @@ function Service() {
   return (
     <div>
       <aside>
+        <h1>Service</h1>
         <div ref={boxRef} className="text">
-          <h1>{service_data[index].text}</h1>
+          <h2>{service_data[index].text}</h2>
           <p>{service_data[index].description}</p>
         </div>
 
@@ -94,13 +95,12 @@ function Service() {
             className="slide-image"
           ></div>
         </div>
-         <Marquee className="slide-text" speed={50} gradient={false}>
-        From everyday wear to special occasions — Get custom-tailored clothing
-        with attention to detail, perfect fit, and your choice of fabric | Free
-        design consultation | Crafted with care, made for you
-      </Marquee>
+        <Marquee className="slide-text" speed={50} gradient={false}>
+          From everyday wear to special occasions — Get custom-tailored clothing
+          with attention to detail, perfect fit, and your choice of fabric |
+          Free design consultation | Crafted with care, made for you
+        </Marquee>
       </aside>
-      
     </div>
   );
 }
